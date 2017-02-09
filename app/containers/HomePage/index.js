@@ -12,13 +12,26 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import {Link} from 'react-router';
+import Header from 'components/Header';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <div>
+        <Header/>
+
+        <main>
+          <p>Welcome to Bokononistaville!
+            <br/>Have a look around!
+          </p>
+
+        </main>
+
+        <footer>
+          <span>ALL RIGHTS RESERVED</span>
+        </footer>
+      </div>
     );
   }
 }

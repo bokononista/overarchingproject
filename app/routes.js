@@ -33,7 +33,55 @@ export default function createRoutes(store) {
 
         importModules.catch(errorLoading);
       },
-    }, {
+    },  {
+        path: '/blog',
+        name: 'blog',
+        getComponent(nextState, cb) {
+          const importModules = Promise.all([
+            import('containers/Blog'),
+          ]);
+
+          const renderRoute = loadModule(cb);
+
+          importModules.then(([component]) => {
+            renderRoute(component);
+          });
+
+          importModules.catch(errorLoading);
+        },
+      },  {
+          path: '/portfolio',
+          name: 'home',
+          getComponent(nextState, cb) {
+            const importModules = Promise.all([
+              import('containers/Portfolio'),
+            ]);
+
+            const renderRoute = loadModule(cb);
+
+            importModules.then(([component]) => {
+              renderRoute(component);
+            });
+
+            importModules.catch(errorLoading);
+          },
+        },  {
+            path: '/contact',
+            name: 'contact',
+            getComponent(nextState, cb) {
+              const importModules = Promise.all([
+                import('containers/Contact'),
+              ]);
+
+              const renderRoute = loadModule(cb);
+
+              importModules.then(([component]) => {
+                renderRoute(component);
+              });
+
+              importModules.catch(errorLoading);
+            },
+          }, {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
