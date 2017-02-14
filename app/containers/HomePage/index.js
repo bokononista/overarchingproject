@@ -17,14 +17,29 @@ import Header from 'components/Header';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
+    const mainStyle={
+      color:"#697777",
+      display:"flex",
+      margin:"15px",
+      padding:"15px",
+      border:"2px solid #697777"
+    };
+    const containerStyle={
+      display:"flex",
+      minHeight:"100vh",
+      flexDirection:"column",
+      backgroundImage: "url(http://h4z.it/Image/ddb74e_schism.png)",
+      backgroundSize:"cover",
+
+    }
     return (
-      <div>
+      <div style={containerStyle}>
         <Header/>
 
-        <main>
-          <p>Welcome to Bokononistaville!
+        <main style={mainStyle}>
+          Welcome to Bokononistaville!
             <br/>Have a look around!
-          </p>
+
 
         </main>
 

@@ -12,13 +12,22 @@ import {Link} from 'react-router';
 
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
+    const headerStyle={
+      background:"#c7e0df"
+    };
+    const linkStyle={
+      color:"#697777",
+      textDecoration: "none",
+      padding:"5px",
+      margin: "20px"
+    };
     return (
-      <header>
+      <header style={headerStyle}>
         <nav>
-          <Link to="/">Homepage</Link>
-          <Link to="/portfolio">Portfolio</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/contact">Contact</Link>
+          <Link style={linkStyle} to="/">Homepage</Link>
+          <Link style={linkStyle} to="/portfolio">Portfolio</Link>
+          <Link style={linkStyle} to="/blog">Blog</Link>
+          <Link style={linkStyle} to="/contact">Contact</Link>
         </nav>
 
       </header>
