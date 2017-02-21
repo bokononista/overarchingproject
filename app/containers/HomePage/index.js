@@ -16,6 +16,17 @@ import {Link} from 'react-router';
 import Header from 'components/Header';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  constructor(props){
+    super(props);
+    this.state={
+
+    }
+
+  }
+  componentWillMount(){
+
+  }
+
   render() {
     const mainStyle={
       color:"#697777",
@@ -36,8 +47,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       <div style={containerStyle}>
         <Header/>
 
-        <main style={mainStyle}>
-          Welcome to Bokononistaville!
+        <main style={mainStyle}>Welcome to Bokononistaville!
             <br/>Have a look around!
 
 
